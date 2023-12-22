@@ -13,9 +13,12 @@
 		824ACA582B35E962004A3A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824ACA562B35E962004A3A9E /* Main.storyboard */; };
 		824ACA5A2B35E965004A3A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824ACA592B35E965004A3A9E /* Assets.xcassets */; };
 		824ACA5D2B35E965004A3A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824ACA5B2B35E965004A3A9E /* LaunchScreen.storyboard */; };
+		CE3641A27027BE13CF16AC92 /* Pods_CachePod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A9B4889DB6DE2D89889EED /* Pods_CachePod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2559EEC3483F7F526FC79E62 /* Pods-CachePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachePod.release.xcconfig"; path = "Target Support Files/Pods-CachePod/Pods-CachePod.release.xcconfig"; sourceTree = "<group>"; };
+		62A9B4889DB6DE2D89889EED /* Pods_CachePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CachePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		824ACA4D2B35E962004A3A9E /* CachePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824ACA502B35E962004A3A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824ACA522B35E962004A3A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		824ACA592B35E965004A3A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		824ACA5C2B35E965004A3A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		824ACA5E2B35E965004A3A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB3734E99C9C648A97625E16 /* Pods-CachePod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachePod.debug.xcconfig"; path = "Target Support Files/Pods-CachePod/Pods-CachePod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3641A27027BE13CF16AC92 /* Pods_CachePod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5695FBC4A35FB6C0AA192D9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB3734E99C9C648A97625E16 /* Pods-CachePod.debug.xcconfig */,
+				2559EEC3483F7F526FC79E62 /* Pods-CachePod.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		824ACA442B35E962004A3A9E = {
 			isa = PBXGroup;
 			children = (
 				824ACA4F2B35E962004A3A9E /* CachePod */,
 				824ACA4E2B35E962004A3A9E /* Products */,
+				5695FBC4A35FB6C0AA192D9E /* Pods */,
+				9B9515258F356165D44D9098 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = CachePod;
 			sourceTree = "<group>";
 		};
+		9B9515258F356165D44D9098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62A9B4889DB6DE2D89889EED /* Pods_CachePod.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 824ACA612B35E965004A3A9E /* Build configuration list for PBXNativeTarget "CachePod" */;
 			buildPhases = (
+				12209BAF9B8467A8E3060A13 /* [CP] Check Pods Manifest.lock */,
 				824ACA492B35E962004A3A9E /* Sources */,
 				824ACA4A2B35E962004A3A9E /* Frameworks */,
 				824ACA4B2B35E962004A3A9E /* Resources */,
+				E21006EEF1DB9EFFED8FD726 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12209BAF9B8467A8E3060A13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CachePod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E21006EEF1DB9EFFED8FD726 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		824ACA492B35E962004A3A9E /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		824ACA622B35E965004A3A9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3734E99C9C648A97625E16 /* Pods-CachePod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +363,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +379,7 @@
 		};
 		824ACA632B35E965004A3A9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2559EEC3483F7F526FC79E62 /* Pods-CachePod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +392,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
