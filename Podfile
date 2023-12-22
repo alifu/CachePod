@@ -1,23 +1,40 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.0'
+use_frameworks!
+inhibit_all_warnings!
+
+plugin 'cocoapods-binary-cache'
+config_cocoapods_binary_cache(
+  cache_repo: {
+    "default" => {
+      "remote" => "git@github.com:alifu/CachePodBinary.git",
+      "local" => "cocoapods-binary-cache"
+    }
+  },
+  xcframework: true,
+  device_build_enabled: true,
+  bitcode_enabled: true
+)
+
+def binary_pod(name, *args)
+  pod name, args, :binary => true
+end
 
 target 'CachePod' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
 
   # Pods for CachePod
-  pod "AFNetworking"
-  pod "SDWebImage"
-  pod "Alamofire"
-  pod "MBProgressHUD"
-  pod "Masonry"
-  pod "SwiftyJSON"
-  pod "SVProgressHUD"
-  pod "MJRefresh"
-  pod "CocoaLumberjack"
-  pod "Realm"
-  pod "SnapKit"
-  pod "Kingfisher"
+  binary_pod "AFNetworking"
+  binary_pod "SDWebImage"
+  binary_pod "Alamofire"
+  binary_pod "MBProgressHUD"
+  binary_pod "Masonry"
+  binary_pod "SwiftyJSON"
+  binary_pod "SVProgressHUD"
+  binary_pod "MJRefresh"
+  binary_pod "CocoaLumberjack"
+  binary_pod "Realm"
+  binary_pod "SnapKit"
+  binary_pod "Kingfisher"
 
 end
 
