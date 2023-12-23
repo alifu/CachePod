@@ -4,7 +4,11 @@ To shorten the build process for projects that use `Cocoapod`, we can use a plug
 
 ## Setup
 
-The project has some scripts available to shorten the project initialization process.
+The project has some scripts available to shorten the project initialization process. Please make sure that `bundler` already installed on your macchine, and run:
+
+```bash
+$ bundle install
+```
 
 ### Pod Check
 Please run the following command to perform `pod install` and initialize `cache`
