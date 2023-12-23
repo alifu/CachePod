@@ -3,21 +3,31 @@ platform :ios, '13.0'
 use_frameworks!
 inhibit_all_warnings!
 
-plugin 'cocoapods-binary-cache'
-config_cocoapods_binary_cache(
-  cache_repo: {
-    "default" => {
-      "remote" => "git@github.com:alifu/CachePodBinary.git",
-      "local" => "~/.cocoapods-binary-cache/prebuilt-frameworks-debug-config"
-    }
-  },
-  xcframework: true,
-  device_build_enabled: true,
-  bitcode_enabled: true
-)
+def is_pod_binary_cache_enabled
+  ENV['IS_POD_BINARY_CACHE_ENABLED'] == 'true'
+end
+
+if is_pod_binary_cache_enabled
+  plugin 'cocoapods-binary-cache'
+  config_cocoapods_binary_cache(
+    cache_repo: {
+      "default" => {
+        "remote" => "git@github.com:alifu/CachePodBinary.git",
+        "local" => "cocoapods-binary-cache"
+      }
+    },
+    xcframework: true,
+    device_build_enabled: true,
+    bitcode_enabled: true
+  )
+end
 
 def binary_pod(name, *args)
-  pod name, args, :binary => true
+  if is_pod_binary_cache_enabled
+    pod name, args, :binary => true
+  else
+    pod name, args
+  end
 end
 
 target 'CachePod' do
@@ -35,6 +45,8 @@ target 'CachePod' do
   binary_pod "Realm"
   binary_pod "SnapKit"
   binary_pod "Kingfisher"
+  binary_pod "RxSwift"
+  binary_pod "RxCocoa"
 
 end
 

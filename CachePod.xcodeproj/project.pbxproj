@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822AAD962B37047E00AD1410 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822AAD952B37047E00AD1410 /* Config.swift */; };
 		824ACA512B35E962004A3A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824ACA502B35E962004A3A9E /* AppDelegate.swift */; };
 		824ACA532B35E962004A3A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824ACA522B35E962004A3A9E /* SceneDelegate.swift */; };
 		824ACA552B35E962004A3A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824ACA542B35E962004A3A9E /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		2559EEC3483F7F526FC79E62 /* Pods-CachePod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachePod.release.xcconfig"; path = "Target Support Files/Pods-CachePod/Pods-CachePod.release.xcconfig"; sourceTree = "<group>"; };
 		62A9B4889DB6DE2D89889EED /* Pods_CachePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CachePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		822AAD952B37047E00AD1410 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		824ACA4D2B35E962004A3A9E /* CachePod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachePod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824ACA502B35E962004A3A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824ACA522B35E962004A3A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				824ACA592B35E965004A3A9E /* Assets.xcassets */,
 				824ACA5B2B35E965004A3A9E /* LaunchScreen.storyboard */,
 				824ACA5E2B35E965004A3A9E /* Info.plist */,
+				822AAD952B37047E00AD1410 /* Config.swift */,
 			);
 			path = CachePod;
 			sourceTree = "<group>";
@@ -102,8 +105,8 @@
 				824ACA492B35E962004A3A9E /* Sources */,
 				824ACA4A2B35E962004A3A9E /* Frameworks */,
 				824ACA4B2B35E962004A3A9E /* Resources */,
-				E21006EEF1DB9EFFED8FD726 /* [CP] Embed Pods Frameworks */,
 				9E9D30BDEDB9BC8CB488E690 /* [CP] Copy Pods Resources */,
+				01821122A03250C053BEAF80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +164,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01821122A03250C053BEAF80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		12209BAF9B8467A8E3060A13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,23 +220,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E21006EEF1DB9EFFED8FD726 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CachePod/Pods-CachePod-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				824ACA552B35E962004A3A9E /* ViewController.swift in Sources */,
+				822AAD962B37047E00AD1410 /* Config.swift in Sources */,
 				824ACA512B35E962004A3A9E /* AppDelegate.swift in Sources */,
 				824ACA532B35E962004A3A9E /* SceneDelegate.swift in Sources */,
 			);
