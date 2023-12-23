@@ -8,7 +8,7 @@ config_cocoapods_binary_cache(
   cache_repo: {
     "default" => {
       "remote" => "git@github.com:alifu/CachePodBinary.git",
-      "local" => "cocoapods-binary-cache"
+      "local" => "~/.cocoapods-binary-cache/prebuilt-frameworks-debug-config"
     }
   },
   xcframework: true,
